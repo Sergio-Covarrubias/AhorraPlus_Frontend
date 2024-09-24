@@ -2,8 +2,14 @@ import Nosotros from './HomePages/Nosotros';
 import Unete from './HomePages/Unete'; 
 import Hero from './HomePages/Hero';
 import Team from './HomePages/Team';
+import { useEffect } from 'react';
+import { reloadServer } from '../api/auth';
 
 function HomePage() {
+    useEffect(() => {
+        reloadServer();
+    }, []);
+    
     return (
         <div> 
            <section>

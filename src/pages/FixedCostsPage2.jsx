@@ -3,6 +3,8 @@ import { useForm, useFieldArray } from 'react-hook-form';
 import { useFinance } from '../context/FinanceContext';
 import FixedCost from '../components/FixedCost';
 
+import Cookies from 'js-cookie';
+
 function FixedCostsPage() {
     const { register, handleSubmit, control, setValue } = useForm({
         defaultValues: {
@@ -31,6 +33,10 @@ function FixedCostsPage() {
     // useEffect(() => {
     //     console.log('update', fields);
     // }, [fields]);
+
+    useEffect(() => {
+        console.log(Cookies.get('token'));
+    }, []);
 
     const { loadFixedCosts, saveFixedCosts } = useFinance();
     useEffect(() => {

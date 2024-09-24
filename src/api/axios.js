@@ -1,8 +1,8 @@
 import axios from 'axios';
-console.log(import.meta.env.BACKEND_URL);
+import 'dotenv/config';
 
 const instance = axios.create({
-    baseURL: import.meta.env.BACKEND_URL,
+    baseURL: process.env.BACKEND_URL,
     withCredentials: true,
 });
 

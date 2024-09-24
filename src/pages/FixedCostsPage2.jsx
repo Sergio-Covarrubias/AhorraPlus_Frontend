@@ -34,10 +34,6 @@ function FixedCostsPage() {
     //     console.log('update', fields);
     // }, [fields]);
 
-    useEffect(() => {
-        console.log(Cookies.get('token'));
-    }, []);
-
     const { loadFixedCosts, saveFixedCosts } = useFinance();
     useEffect(() => {
         async function loadFixedCostsFromDatabase() {
@@ -86,7 +82,7 @@ function FixedCostsPage() {
                         Agregar gastos
                     </button>
 
-                    <button className='font-mono px-4 py-2 bg-red-500 text-white hover:bg-green-600 rounded-sm shadow-[5px_5px_0px_0px_#218f38]' type='button' onClick={ () => { remove() } }>Borrar</button>
+                    <button className='font-mono px-4 py-2 bg-red-500 text-white hover:bg-red-600 rounded-sm shadow-[5px_5px_0px_0px_#218f38]' type='button' onClick={ () => { remove() } }>Borrar</button>
                     
                     <div className='space-y-4'>
                         {

@@ -6,6 +6,7 @@ import { GraphProvider } from './context/GraphContext';
 
 import ProtectedRoute from './components/ProtectedRoute';
 import NavBar from './components/NavBar';
+import Reloader from './components/Reloader';
 
 import HomePage from './pages/HomePage';
 import RegisterPage from './pages/RegisterPage';
@@ -21,10 +22,10 @@ function App() {
       <FinanceProvider>
         <GraphProvider>
           <BrowserRouter>
-          <NavBar/>
+            <NavBar/>
+            <Reloader/>
 
             <Routes>
-
               <Route path='/' element={ <HomePage/> } />
               <Route path='/register' element={ <RegisterPage/> } />
               <Route path='/login' element={ <LoginPage/> } />
@@ -35,7 +36,6 @@ function App() {
                 <Route path='/graphs' element={ <GraphsPage/> } />
                 <Route path='/chatbot' element={ <ChatBotPage/> } />
               </Route>
-              
             </Routes>
             
           </BrowserRouter>

@@ -13,7 +13,7 @@ class RangeCost extends React.Component {
     }
 
     render() {
-        //                <button type='button' onClick={ () => { this.state.remove(this.state.index); } } className='font-bold text-red-600'>Borrar</button>
+        //<button type='button' onClick={ () => { this.state.remove(this.state.index); } } className='font-bold text-red-600'>Borrar</button>
 
         return (
             <div className='flex justify-between space-x-2 font-mono'>

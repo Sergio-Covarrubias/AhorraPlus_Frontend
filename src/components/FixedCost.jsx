@@ -15,8 +15,7 @@ class FixedCost extends React.Component {
     }
 
     render() {
-        //                <button type='button' onClick={ () => { this.state.remove(this.state.id); } } className='font-bold text-red-600'>Borrar</button>
-
+        //<button type='button' onClick={ () => { this.state.remove(this.state.id); } } className='font-bold text-red-600'>Borrar</button>
         return (
             <div className='flex justify-evenly font-mono'>
                 <input type='text' placeholder={ `Nombre del gasto` } { ...this.state.register(`fixedCosts.${this.state.index}.name`, { required: true }) } />

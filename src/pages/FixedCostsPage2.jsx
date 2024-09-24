@@ -35,7 +35,6 @@ function FixedCostsPage() {
     const { loadFixedCosts, saveFixedCosts } = useFinance();
     useEffect(() => {
         async function loadFixedCostsFromDatabase() {
-            console.log('load');
             const { earnings,  fixedCosts } = await loadFixedCosts();
 
             setValue('earnings', earnings);
@@ -43,7 +42,6 @@ function FixedCostsPage() {
 
             remove();
             fixedCosts.forEach((element, index) => {
-                console.log(element)
                 append(element);
             });
         }
